@@ -2,6 +2,7 @@ package org.hzhang.studentservice.controller;
 
 import org.hzhang.studentserviceapi.domain.Student;
 import org.hzhang.studentserviceapi.service.StudentService;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 

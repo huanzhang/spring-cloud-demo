@@ -1,7 +1,5 @@
 package org.hzhang.schoolservice;
 
-import org.hzhang.schoolservice.contorller.SchoolServiceController;
-import org.hzhang.studentserviceapi.service.StudentServiceFeignClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -13,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableEurekaClient
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = "org.hzhang.studentserviceapi")
-@ComponentScan(basePackageClasses = {StudentServiceFeignClient.class, SchoolServiceController.class})
+@ComponentScan(basePackages= {"org.hzhang.studentserviceapi", "org.hzhang.schoolservice"})
 public class SchoolServiceApplication {
 
 	public static void main(String[] args) {

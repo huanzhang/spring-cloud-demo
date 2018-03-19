@@ -15,6 +15,7 @@
         <module>student-service</module>
         <module>spring-eureka-server</module>
         <module>student-service-api</module>
+        <module>spring-config-server</module>
     </modules>
 
 </project>
