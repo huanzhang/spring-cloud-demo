@@ -16,6 +16,7 @@
         <module>spring-eureka-server</module>
         <module>student-service-api</module>
         <module>spring-config-server</module>
+        <module>spring-zuul-gateway</module>
     </modules>
 
 </project>
