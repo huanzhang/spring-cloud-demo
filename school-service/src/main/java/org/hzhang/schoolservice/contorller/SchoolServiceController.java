@@ -18,26 +18,26 @@ import java.util.List;
 @RefreshScope
 @RestController
 public class SchoolServiceController {
-	@Autowired
-	StudentServiceFeignClient studentServiceFeignClient;
+    @Autowired
+    StudentServiceFeignClient studentServiceFeignClient;
 
     @Value("${message:Hello default}")
     private String message;
 
-	@RequestMapping(value = "/getSchoolDetails/{schoolname}", method = RequestMethod.GET)
-	public String getStudents(@PathVariable String schoolname) {
-		System.out.println("Getting School details for " + schoolname);
+    @RequestMapping(value = "/getSchoolDetails/{schoolname}", method = RequestMethod.GET)
+    public String getStudents(@PathVariable String schoolname) {
+        System.out.println("Getting School details for " + schoolname);
 
-		List<Student> students = studentServiceFeignClient.getStudents(schoolname);
+        List<Student> students = studentServiceFeignClient.getStudents(schoolname);
 
-		System.out.println("Response Received as " + students);
+        System.out.println("Response Received as " + students);
 
-		return "School Name -  " + schoolname + " \n Student Details " + students;
-	}
+        return "School Name -  " + schoolname + " \n Student Details " + students;
+    }
 
-	@RequestMapping(value= "/greetings", method = RequestMethod.GET)
-	public String sayHello() {
-		return this.message;
-	}
+    @RequestMapping(value = "/greetings", method = RequestMethod.GET)
+    public String sayHello() {
+        return this.message;
+    }
 }
 

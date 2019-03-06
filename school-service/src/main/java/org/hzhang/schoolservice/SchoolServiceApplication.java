@@ -11,10 +11,10 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableEurekaClient
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = "org.hzhang.studentserviceapi")
-@ComponentScan(basePackages= {"org.hzhang.studentserviceapi", "org.hzhang.schoolservice"})
+@ComponentScan(basePackages = {"org.hzhang.studentserviceapi", "org.hzhang.schoolservice"})
 public class SchoolServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SchoolServiceApplication.class, args);
-	}
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SchoolServiceApplication.class, args);
+    }
+}

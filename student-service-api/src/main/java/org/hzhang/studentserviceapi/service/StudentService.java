@@ -12,6 +12,6 @@ import java.util.List;
  */
 public interface StudentService {
 
-	@RequestMapping(value = "/getStudentDetailsForSchool/{schoolname}", method = RequestMethod.GET, produces = "application/json")
-	List<Student> getStudents(@PathVariable("schoolname") String schoolname);
+    @RequestMapping(value = "/getStudentDetailsForSchool/{schoolname}", method = RequestMethod.GET, produces = "application/json")
+    List<Student> getStudents(@PathVariable("schoolname") String schoolname);
 }
